@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#050505">
+<title>For My Bestie 💛</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=FINAL3">
+</head>
+<body>
+<div id="heartLayer" aria-hidden="true"></div>
+
+<main id="app">
+  <!-- 1: LOCK -->
+  <section class="screen active" id="screen1">
+    <div class="ambient a"></div><div class="ambient b"></div>
+    <div class="lock-layout">
+      <div class="lock-visual">
+        <div class="photo-ring">
+          <img src="assets/photo3.jpeg" alt="Birthday girl">
+          <i>✦</i><i>♥</i><i>✦</i>
+        </div>
+      </div>
+      <div class="lock-content">
+        <div class="mini-title">A PRIVATE LITTLE WORLD</div>
+        <h1>Only you can<br><span>unlock this.</span></h1>
+        <p>There are a few surprises waiting behind this door.<br>Enter your birthday to open them.</p>
+        <div class="digits" id="digits">
+          <input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric">
+          <input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric">
+        </div>
+        <button class="btn" id="unlock">UNLOCK MY SURPRISE <b>→</b></button>
+        <div class="hint">birthday code • DDMM</div>
+        <div class="error" id="error"></div>
+      </div>
+    </div>
+    <div class="corner-note">made with too much love ♡</div>
+  </section>
+
+  <!-- 2: BIRTHDAY HERO — inspired by user's 2nd reference -->
+  <section class="screen" id="screen2">
+    <div class="grid-bg"></div>
+    <div class="confetti c1">✦</div><div class="confetti c2">✦</div><div class="confetti c3">♥</div>
+    <div class="hero2">
+      <div class="hero-left">
+        <div class="tag">✦ TODAY IS YOUR DAY ✦</div>
+        <h2><span>Happy</span><br>Birthday</h2>
+        <div class="date-chip">THE BESTIE EDITION • 2026</div>
+        <p>To my favorite person.</p>
+        <button class="btn yellow" data-go="screen3">CLICK HERE <b>♡</b></button>
+      </div>
+
+      <div class="hero-right">
+        <div class="balloon balloon1"></div><div class="balloon balloon2"></div>
+        <div class="photo-circle"><img src="assets/photo7.jpeg" alt="Birthday girl"></div>
+        <div class="sticker">bestie<br><span>♡</span></div>
+        <div class="sticker2">shine ✦</div>
+      </div>
+    </div>
+    <div class="bottom-stars">· ✦ · ♥ · ✦ ·</div>
+  </section>
+
+  <!-- 3: LETTER -->
+  <section class="screen" id="screen3">
+    <div class="letter-page">
+      <div class="tag">A LETTER I COULDN'T SAY IN ONE TEXT</div>
+      <div class="letter-card">
+        <div class="letter-copy">
+          <div class="script-title">To you ♥</div>
+          <h3>Happy Birthday,<br>my bestie.</h3>
+          <p id="typed"></p>
+          <div class="signature">— always cheering for you ✦</div>
+        </div>
+      </div>
+      <button class="btn yellow" data-go="screen4">CLICK HERE FOR NEXT SURPRISE <b>→</b></button>
+    </div>
+  </section>
+
+  <!-- 4: FIXED GALLERY, NO PAGE SCROLL -->
+  <section class="screen" id="screen4">
+    <div class="gallery-page">
+      <div class="gallery-head">
+        <div>
+          <div class="tag">OUR LITTLE MEMORY WALL</div>
+          <h2>Some moments,<br><span>some forever.</span></h2>
+        </div>
+        <div class="gallery-count"><span id="count">01</span> / 07</div>
+      </div>
+
+      <div class="gallery-stage">
+        <button class="gallery-arrow prev" id="prev" aria-label="Previous photo">‹</button>
+        <div class="memory-show">
+          <div class="memory-photo"><img id="galleryImg" src="assets/photo1.jpeg" alt="Memory"></div>
+          <div class="memory-message" id="galleryMessage">Some people make every room brighter. You are one of them. 💛</div>
+        </div>
+        <button class="gallery-arrow next" id="next" aria-label="Next photo">›</button>
+      </div>
+
+      <div class="dots" id="dots"></div>
+      <button class="btn yellow" data-go="screen5">ONE LAST SURPRISE <b>♡</b></button>
+      <div class="gallery-hint">tap the arrows to see all our little memories</div>
+    </div>
+  </section>
+
+  <!-- 5: HEART -->
+  <section class="screen final" id="screen5">
+    <canvas id="heartCanvas"></canvas>
+    <div class="final-copy">
+      <div class="tag">ONE LAST THING...</div>
+      <h2>Happiest Birthday,<br><span>Riyuuu! ❤️</span></h2>
+      <p>May this year be gentle with your heart,<br>kind to your dreams, and full of reasons to smile.</p>
+      <div class="rule"></div>
+      <div class="hand">You are my favourite bestiee ♡</div>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
